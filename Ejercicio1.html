@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1</title>
+</head>
+
+<body>
+
+    <script>
+        const nombre = prompt('¡Hola! ¿Cómo te llamas?');
+        const distancia = prompt('¿Cuántos metros vas a recorrer?:');
+
+        if (Number.isNaN(distancia)) {
+            document.write('¡El dato ingresado no corresponde a una distancia!');
+        } else if (distancia == 0 || distancia <= 1000) {
+            document.write(`Hola ${nombre} para recorrer ${distancia} metros podrías ir a pie.`);
+        } else if (distancia == 1001 || distancia <= 10000) {
+            document.write(`Hola ${nombre} para recorrer ${distancia} metros podrías ir bicicleta.`);
+        } else if (distancia == 10001 || distancia <= 30000) {
+            document.write(`Hola ${nombre} para recorrer ${distancia} metros podrías ir en colectivo.`);
+        } else if (distancia == 30001 || distancia <= 100000) {
+            document.write(`Hola ${nombre} para recorrer ${distancia} metros podrías ir en auto.`);
+        } else if (distancia >= 100001) {
+            document.write(`Hola ${nombre} para recorrer ${distancia} metros vas a tener que viajar en avión.`);
+        }
+    </script>
+
+</body>
+
+</html>

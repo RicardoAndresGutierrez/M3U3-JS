@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        const numeros = [15, 5, 80, 1079, 1800, 55758, 4, 30, 8, 32];
+
+        document.write(`Numeros: (${numeros}).   `)
+
+        console.log(numeros.length);
+        console.log(numeros);
+
+        const first = numeros[0];
+        console.log(`El primer número es ${first}`, ' ');
+        document.write(`El primer número es ${first}`, ', ');
+
+
+        const last = numeros[numeros.length - 1];
+        console.log(`El úlitmo número es ${last}`, ' ');
+        document.write(`El úlitmo número es ${last}`, ', ');
+
+
+
+        let mayor = 0;
+        for (let i = 0; i < numeros.length; i++) {
+            if (numeros[i] > mayor) {
+                mayor = numeros[i];
+            }
+        } console.log(`El número mayor es: ${mayor}`)
+        document.write(`El número mayor es: ${mayor}`)
+
+    </script>
+
+
+</body>
+
+</html>
