@@ -12,10 +12,15 @@
 
     <script>
         const nombre = prompt('¡Hola! ¿Cómo te llamas?');
-        const distancia = parseInt(prompt('¿Cuántos metros vas a recorrer?:'));
+        let distancia = parseInt(prompt('¿Cuántos metros vas a recorrer?:'));
+        do {
+            distancia = parseInt(prompt('¿Cuántos metros vas a recorrer?:'));
+        } while (isNaN(distancia));
+
+        
 
         if (Number.isNaN(distancia)) {
-            document.write('¡El dato ingresado no corresponde a una distancia!');
+            document.write('¡El dato ingresado no corresponde a una distancia!'); /*aunque ya tiene bucle con do y while*/
         } else if (distancia == 0 || distancia <= 1000) {
             document.write(`Hola ${nombre} para recorrer ${distancia} metros podrías ir a pie.`);
         } else if (distancia == 1001 || distancia <= 10000) {
