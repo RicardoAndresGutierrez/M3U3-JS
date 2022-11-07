@@ -12,7 +12,7 @@
 
     <script>
         const nombre = prompt('¡Hola! ¿Cómo te llamas?');
-        let distancia = parseInt(prompt('¿Cuántos metros vas a recorrer?:'));
+        let distancia;
         do {
             distancia = parseInt(prompt('¿Cuántos metros vas a recorrer?:'));
         } while (isNaN(distancia));
@@ -20,18 +20,28 @@
         
 
         if (Number.isNaN(distancia)) {
-            document.write('¡El dato ingresado no corresponde a una distancia!'); /*aunque ya tiene bucle con do y while*/
+            document.write('¡El dato ingresado no corresponde a una distancia!'); 
+            console.log('¡El dato ingresado no corresponde a una distancia!'); /*aunque ya tiene bucle con do y while*/
         } else if (distancia == 0 || distancia <= 1000) {
             document.write(`Hola ${nombre} para recorrer ${distancia} metros podrías ir a pie.`);
+            console.log(`Hola ${nombre} para recorrer ${distancia} metros podrías ir a pie.`);
         } else if (distancia == 1001 || distancia <= 10000) {
             document.write(`Hola ${nombre} para recorrer ${distancia} metros podrías ir bicicleta.`);
+            console.log(`Hola ${nombre} para recorrer ${distancia} metros podrías ir bicicleta.`);
         } else if (distancia == 10001 || distancia <= 30000) {
             document.write(`Hola ${nombre} para recorrer ${distancia} metros podrías ir en colectivo.`);
+            console.log(`Hola ${nombre} para recorrer ${distancia} metros podrías ir en colectivo.`);
         } else if (distancia == 30001 || distancia <= 100000) {
             document.write(`Hola ${nombre} para recorrer ${distancia} metros podrías ir en auto.`);
+            console.log(`Hola ${nombre} para recorrer ${distancia} metros podrías ir en auto.`);
         } else if (distancia >= 100001) {
             document.write(`Hola ${nombre} para recorrer ${distancia} metros vas a tener que viajar en avión.`);
+            console.log(`Hola ${nombre} para recorrer ${distancia} metros vas a tener que viajar en avión.`);
         }
+
+        console.log ('Hecho por: Andres Gutierrez')
+
+        
     </script>
 
 </body>
